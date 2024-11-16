@@ -1,3 +1,4 @@
+
 const commandDetails = {
     "ctrl-l": {
         title: "Ctrl + L",
@@ -24,7 +25,8 @@ const commandDetails = {
     },
     "git-add-dot": {
         title: "git add .",
-        description: "Добавляет все изменения в текущей директории в область подготовки."
+        description: "Добавляет все изменения в текущей директории в область подготовки"
+        +" кроме тех, что указаны в .gitignore"
     },
     "git-commit-message": {
         title: "git commit -m \"message\"",
@@ -39,7 +41,7 @@ const commandDetails = {
         description: "Переименовывает текущую ветку в main."
     },
     "git-remote-add": {
-        title: "git remote add origin URL",
+        title: "git remote add origin <URL ссылка на репозиторий> ",
         description: "Добавляет удалённый репозиторий."
     },
     "git-push-origin": {
@@ -47,7 +49,7 @@ const commandDetails = {
         description: "Отправляет изменения в основную ветку удалённого репозитория."
     },
     "git-clone": {
-        title: "git clone SSH",
+        title: "git clone <SSH ключ репозитория> ",
         description: "Клонирует удалённый репозиторий с использованием SSH."
     },
     "git-pull": {
@@ -55,24 +57,25 @@ const commandDetails = {
         description: "Получает изменения из удалённого репозитория и сливает их."
     },
     "git-rm-cached": {
-        title: "git rm --cached filename",
+        title: "git rm --cached <имя файла> ",
         description: "Удаляет файл из области подготовки, но оставляет его в рабочей директории."
+        +" удобно для файлов, которые нужно добавить в .gitignore, если они уже были проиндексированы."
     },
     "git-branch-name": {
-        title: "git branch name",
-        description: "Создаёт новую ветку."
+        title: "git branch <имя ветки> ",
+        description: "Создаёт новую ветку с копией файлов из текущей."
     },
     "git-checkout": {
-        title: "git checkout name",
+        title: "git checkout <имя ветки> или git switch <имя ветки>  ",
         description: "Переключается на другую ветку."
     },
     "git-branch-delete": {
-        title: "git branch -D name",
+        title: "git branch -D <имя ветки>",
         description: "Удаляет ветку."
     },
     "git-checkout-create": {
-        title: "git checkout -b name",
-        description: "Создаёт и переключается на новую ветку."
+        title: "git checkout -b <имя ветки>",
+        description: "Создаёт новую ветку и переключиться на нее одной командой."
     },
     "git-commit-am": {
         title: "git commit -am \"message\"",
