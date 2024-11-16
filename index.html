@@ -3,14 +3,53 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="./main.js" defer></script>
-    <link rel="stylesheet" href="./mikhail.css">
+    <title>Git Bash Guide</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" defer></script>
 </head>
 <body>
-    <h1>Proekt</h1>
-    <p>Hallöchen für alle!!</p>
-    <h2>Hi</h2>
-    <footer>footer</footer>
+    <header>
+        <h1>Руководство по командам Git Bash</h1>
+    </header>
+
+    <main>
+
+        <section class="commands-list">
+            <h2>Основные команды :</h2>
+            <ul id="command-list">
+                <li><button onclick="showDetails('ctrl-l')">Ctrl + L</button></li>
+                <li><button onclick="showDetails('git-log')">git log</button></li>
+                 <li><button onclick="showDetails('git-status')">git status</button></li>
+                 <li><button onclick="showDetails('git-branch-main')">git branch -M main</button></li>
+                <li><button onclick="showDetails('git-init')">git init</button></li>
+                <li><button onclick="showDetails('git-add')">git add</button></li>
+                <li><button onclick="showDetails('git-add-dot')">git add .</button></li>
+                <li><button onclick="showDetails('git-commit')">git commit</button></li>
+                <li><button onclick="showDetails('git-commit-message')">git commit -m "message"</button></li>
+                <li><button onclick="showDetails('git-commit-am')">git commit -am "message"</button></li>
+                <li><button onclick="showDetails('git-push')">git push</button></li>
+                <li><button onclick="showDetails('git-push-origin')">git push -u origin main</button></li>
+                <li><button onclick="showDetails('git-remote-add')">git remote add origin URL</button></li>
+                <li><button onclick="showDetails('git-clone')">git clone SSH</button></li>
+                <li><button onclick="showDetails('git-pull')">git pull</button></li>
+                <li><button onclick="showDetails('git-rm-cached')">git rm --cached filename</button></li>
+                <li><button onclick="showDetails('git-branch-name')">git branch name</button></li>
+                <li><button onclick="showDetails('git-checkout')">git checkout name</button></li>
+                <li><button onclick="showDetails('git-branch-delete')">git branch -D name</button></li>
+                <li><button onclick="showDetails('git-checkout-create')">git checkout -b name</button></li>
+                <li><button onclick="showDetails('git-remote-v')">git remote -v</button></li>
+            </ul>
+        </section>
+        
+    </main>
+
+    <div id="modal" class="modal hidden">
+        <div class="modal-content">
+            <span class="close-button" onclick="closeModal()">&times;</span>
+            <h3 id="command-title">Command</h3>
+            <p id="command-description">Описание</p>
+        </div>
+    </div>
+    
 </body>
 </html>
