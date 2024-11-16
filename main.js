@@ -9,6 +9,7 @@ const commandDetails = {
         description: "Инициализирует новый Git-репозиторий в текущей директории."
     },
     "git-status": {
+        title: "git status",
         description: "Отображает статус рабочей директории и области подготовки."
     },
     "git-add": {
