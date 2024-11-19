@@ -87,7 +87,7 @@ const commandDetails = {
         description: "Показывает список удалённых репозиториев."
     }
 };
-//console.log(commandDetails);
+console.log(commandDetails);
 
 function showDetails(command) {
     const modal = document.querySelector("#modal");
