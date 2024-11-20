@@ -35,7 +35,12 @@ const commandDetails = {
     },
     "git-log": {
         title: "git log",
-        description: "Показывает историю коммитов."
+        description: "Показывает полнаю историю коммитов" 
+        +"(q - выход из режима просмотра коммитов)."
+    },
+    "git-log--oneline": {
+        title: "git log --oneline",
+        description: "Показывает краткую историю коммитов" 
     },
     "git-branch-main": {
         title: "git branch -M main",
@@ -70,6 +75,14 @@ const commandDetails = {
         title: "git checkout <имя ветки> или git switch <имя ветки>  ",
         description: "Переключается на другую ветку."
     },
+    "git-checkout-commit-ID": {
+        title: "git checkout <идентификатор коммита>",
+        description: "Переключается на коммит."
+    },
+    "git-merge": {
+        title: "git merge <имя ветки>",
+        description: "Добавляет изменения из текущей ветки в ветку main."
+    },
     "git-branch-delete": {
         title: "git branch -D <имя ветки>",
         description: "Удаляет ветку."
@@ -85,7 +98,29 @@ const commandDetails = {
     "git-remote-v": {
         title: "git remote -v",
         description: "Показывает список удалённых репозиториев."
-    }
+    },
+    "git-switch-c": {
+        title: "git switch -c <имя ветки>",
+        description: "Копия кода коммита в новую ветку."
+    },
+    "git-reset--hard-commit-ID": {
+        title: "git reset --hard <идентификатор коммита>",
+        description: "Откатиться до коммита с изменением файлов в текущем каталоге."
+    },
+    "git-reset--soft-HEAD^": {
+        title: "git reset --soft HEAD^",
+        description: "Откатиться на коммит назад без изменения файлов в текущем каталоге"
+        +" (изменения останутся для того чтобы можно было сохранить их в новом коммите)."
+    },
+    "git-reflog": {
+        title: "git reflog",
+        description: "Посмотреть идентификаторы изменений в текущей активной ветке."
+    },
+    "git-revert-commit-ID": {
+        title: "git revert <идентификатор коммита>",
+        description: "отменить изменения указанного коммита"
+        +" создав новый коммит и оставив старый в истории."
+    },
 };
 console.log(commandDetails);
 
