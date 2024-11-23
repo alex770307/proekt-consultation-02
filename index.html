@@ -17,8 +17,17 @@
     <main>
 
         <section class="commands-list">
+
+            <h2>Команды для аутентификации на Git Hub :</h2>
+            <ul id="authentication-command-list">
+                <li><button onclick="showDetails('ssh-keygen -t ed25519 -C')">ssh-keygen -t ed25519 -C "email"</button></li>
+                <li><button onclick="showDetails('cat ~/.ssh/id_ed25519.pub')">cat ~/.ssh/id_ed25519.pub</button></li>
+                <li><button onclick="showDetails('eval $(ssh-agent -s)')">eval "$(ssh-agent -s)"</button></li>
+                <li><button onclick="showDetails('ssh-add ~/.ssh/id_ed25519')">ssh-add ~/.ssh/id_ed25519</button></li>
+            </ul>
+            
             <h2>Основные команды :</h2>
-            <ul id="command-list">
+            <ul id="head-command-list">
                 <li><button onclick="showDetails('ctrl-l')">Ctrl + L</button></li>
                 <li><button onclick="showDetails('git-log')">git log</button></li>
                 <li><button onclick="showDetails('git-log--oneline')">git log --oneline</button></li>
